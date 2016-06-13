@@ -1,0 +1,123 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.hide{
+    display: none;
+}
+
+.header {
+    position: fixed;
+    margin: 10px;
+    font-size: 300%;
+}
+
+.wrapperAll {
+    white-space: nowrap;
+    display: flex;
+    margin-top: 90px;
+}
+
+.wrapperData4OnePic {
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.picContainer {
+    width: 250px;
+    height: 180px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    /*white-space: nowrap;*/
+    display: inline-block;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.picAuthLinksContainer {
+    width: 250px;
+    margin: 5px;
+    padding: 5px;
+    clear:both;
+    overflow:hidden;
+}
+
+.descriptionContainer {
+    width: 250px;
+    margin: 5px;
+    padding: 5px;
+    clear:both;
+    white-space:pre-wrap;
+    word-wrap: break-word;
+}
+
+.tagsContainer {
+    width: 250px;
+    margin: 5px;
+    padding: 5px;
+    clear:both;
+    white-space:pre-wrap;
+}
+
+.highlighted  {
+    color: lime;
+    background-color: black;
+}
+
+.highlightAll {
+    color: white;
+    background-color: rgb(66, 184, 221);
+}
+
+.searchDiv {
+    position: fixed;
+    left: 20px;
+    top: 83px;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}

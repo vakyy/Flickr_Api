@@ -1,0 +1,47 @@
+<div class="searchDiv">
+    <input name="searchText" id="searchText" type="text" size=15 value="">
+
+    <span id="findPrevSpan" class="hide">
+        <button id="findPrev" name="findPrev" class="button-secondary pure-button"
+                onclick="
+                    $('.highlighted').attr('class','highlightAll');
+                    findInPage('prev','');
+                    return false;
+                    "><i class="fa fa-search-minus"></i> <<</button>
+    </span>
+
+    <span id="insteadFindPrevSpan" class="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+
+    <span id="findFirstSpan">
+        <button id="findFirst" name="findFirst" class="button-secondary pure-button"
+                onclick="
+                    if ($('#searchText').val()=='') {
+                        return false;
+                    }
+                    if ($('#previouslySearchedText').val()!='')
+                    {   $('.highlighted, .highlightAll').replaceWith($('#previouslySearchedText').val());
+                    }
+                    $('.highlighted').attr('class','highlightAll');
+                    $('#previouslySearchedText').val($('#searchText').val());
+                    $('.picAuthLinksContainer, .descriptionContainer, .tagsContainer').each(function(event){
+                        highlight($('#searchText').val(),'highlightAll','s'+$(this).attr('id'), $(this));
+                    });
+                    findInPage('','');
+                    return false;
+                    "><i class="fa fa-search"></i> Find</button>
+    </span>
+
+    <span id="findNextSpan" class="hide">
+        <button id="findNext" name="findNext" class="button-secondary pure-button"
+                onclick="
+                    $('.picAuthLinksContainer, .descriptionContainer, .tagsContainer').each(function(event){
+                        highlight($('#searchText').val(),'highlightAll','s'+$(this).attr('id'), $(this));
+                    });
+                    $('.highlighted').attr('class','highlightAll');
+                    findInPage('','');
+                    return false;
+                    "><i class="fa fa-search-plus"></i> >></button>
+    </span>
+</div>

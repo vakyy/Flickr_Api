@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <title>Photo Stream</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Photo Stream">
+
+    <script src="./js-libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./controllers/includingHTML.js"></script>
+    <script src="./models/ajaxRequests/getJson.js"></script>
+    <script src="./models/htmlBuilds/jsonDataInHtmlContainers.js"></script>
+    <script src="./controllers/addingReadMoreToLongerTexts.js"></script>
+    <script src="./controllers/searchOnEnterPressed.js"></script>
+    <script src="./models/htmlBuilds/highlightingSearched_FoundTexts.js"></script>
+    <script src="./models/htmlBuilds/findInPage.js"></script>
+
+    <link rel="stylesheet" href="./css-libs/main.css">
+    <link rel="stylesheet" href="./css-libs/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body onload="$('html, body').animate({scrollLeft: 0}, 0);">
+
+    <div class="header">Flickr Photo Stream</div>
+
+    <div include-html="./views/hiddenDataFields.html" class="hide" ></div>
+    <div include-html="./views/searchButtons.html"></div>
+
+    <div class="wrapperAll" id="images"></div>
+
+    <script>
+        includeHTML();
+        getPics($("#url").val());
+    </script>
+</body>
+</html>
